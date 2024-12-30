@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/login.css">
+    <title>Login</title>
+    <body>
+        <div class="container">
+            <div>
+                <h2>Welcome Back!</h2>
+                <form>
+                    <label for="mail">Email</label>
+                    <br>
+                    <input type="email" name="email" id="mail" placeholder="Enter Email" class="em">
+                    <p id="txtlogin_email" style="color: brown;"></p>
+                    <label for="pass">Password</label>
+                    <input type="password" name="password" id="pass" placeholder="Enter Password" class="pw">
+                    <p id="txtlogin_pas" style="color: brown;" ></p>
+                    <input type="radio" value="user" id="u1" name="kind_user" required>
+                    <label for="u1">User</label>
+                    <input type="radio" value="admin" id="d1" name="kind_user">
+                    <label for="d1">Admin</label>
+                    <input type="submit" value="Login" class="log" , onclick="login(event)">
+                </form>
+            </div>
+            <p>Don't have an account? <a href="signup.html" class="sign">Sign Up now!</a></p>
+        </div>
+        <script src="Javascript/login.js"></script>
+    </body>
+</html> 

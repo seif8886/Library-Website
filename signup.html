@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Online Library website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="icon" href="../Photos/logo.jpg">
+    <link rel="stylesheet" href="CSS/signup.css"> <!-- Link to signup.css -->
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h2>Sign up Form</h2>
+            <form action="/action_page.php">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="em" placeholder="Ex: B0udy" required>
+                <p id = "txt_user" style="color: brown"></p>
+                <label for="email">Email</label>
+                <input type="email" id="email" class="em" placeholder="Enter Email" name="email" required>
+                <p id = "txt_email" style="color: brown"></p>
+                <label for="psw">Password</label>
+                <input type="password" id="psw" class="pw" placeholder="Enter Password" name="psw" required>
+                <br>
+                <label for="psw-repeat">Repeat Password</label>
+                <input type="password" id="psw-repeat" class="pw" placeholder="Repeat Password" name="psw-repeat" required>
+                <p id = "txt_pas" style="color: brown"></p>
+                <input type="radio" value="user" id="u1" name="kind_user" required>
+                <label for="u1">User</label>
+                <input type="radio" value="admin" id="d1" name="kind_user">
+                <label for="d1">Admin</label>
+                <br>
+                <br>
+                <input type="submit" value="Sign Up" onclick="sign(event)">
+            </form>
+        </div>
+        <p>Already have an account? <a href="login.html" class="sign">Log in</a></p>
+    </div>
+    <script src="Javascript/sign_up.js"></script>
+    
+</body>
+
+</html>

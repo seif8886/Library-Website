@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="eg">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Online Library website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library website</title>
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/project.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    
+    <link rel="icon" href="../Photes/logo.jpg">
+    <script src="https://kit.fontawesome.com/bd735b1809.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h2>
+            <img src="images/logo2.jpg" alt="logo">
+            Online Library
+        </h2>
+        <div class="links">
+            <ul>
+                <li><a href="admin.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li>
+                    <input type="text" id="Search" placeholder="Search here" onkeypress="Search(event)">
+                </li>
+                <li><a id="viewbtn" onclick="show()">View Book</a></li>
+                <li><a href="project.html">Log out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="view_book">
+      <div class="search">
+        <input list="list_books" name="books" id="view_books" placeholder="Search here">
+        <datalist id="list_books">
+            <option value="chrome">
+            <option value="younes">
+            <option value="chrome">
+            <option value="chrome">
+        </datalist>
+        <button onclick="document.getElementById('details_book').style.display='block'">Details</button>
+        <button onclick="document.getElementById('delete_book').style.display='block'">Delete</button>
+      </div>
+    <div id="details_book">
+            <form class="view">
+               <div class="vitem1">
+                <label for="book_name">Book Name:</label>
+                <input type="text" id="book_name" name="book_name" required><br>
+               </div>
+                <div class="vitem2">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required><br>
+                </div>
+               <div class="vitem3">
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required><br>
+               </div>
+               <div class="vitem4">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea><br>
+               </div>
+                <div class="vitem5">
+                    <input type="submit" value="Save" class="button">
+                    <input type="button" value="Cancel" class="button">
+                </div>
+            </form>
+    </div>
+    <div id="delete_book">
+        <fieldset>
+            <legend><h2>Delete Book</h2></legend>
+            <p>Are you sure you want to delete this book?</p>
+            <form >
+                <input type="submit" value="Delete" class="deletebtn">
+            </form>
+        </fieldset>
+    </div>
+</div>
+    <div class="container1">
+        <div class="caption">
+            <p>Welcome to our</p>
+            <h1>Online Library Website</h1>
+            <p>We are one of the oldest and best libraries in the middle east</p>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="image">
+            <img src="images/library-page.jpeg" alt="library">
+        </div>
+        <div class="caption">
+            <div class="part1">
+                <h2>Who we are?</h2>
+                <p>One of the oldest library that could build its online website and offered to the user the possibility
+                    to borrow books , show them or buy them online
+                </p>
+            </div>
+            <div class="part2">
+                <ul>
+                    <li><i class="fa-solid fa-face-smile-beam"></i>Website easy to use</li>
+                    <li><i class="fa-solid fa-book-open"></i>Offers many recommended catagories</li>
+                    <li><i class="fa-solid fa-universal-access"></i>Offers some books for disabled people</li>
+                    <li><i class="fa-solid fa-money-check-dollar"></i>Books with cheap prices</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cont3">
+        <form class="f">
+            <input type="text" placeholder="Name" id="bookName">
+            <input type="text" placeholder="Author" id="Author">
+            <input type="text" placeholder="Category" id="Category">
+            <input type="text" placeholder="Language" id="Language">
+            <input type="date" placeholder="Publication Date" id="Publication">
+            <textarea name="des" id="Description" placeholder="Description"></textarea>
+            <input accept="image/*" type="file" name="" id="imgs">
+            <input style="margin-top: 10px;" accept=".pdf" type="file" name="" id="pdfs">
+            <button class="button" id="addbook" for="Add" value="Add Book" onclick="setValues()">Add Book</button>
+            <button class="button d-none" id="updateBook" for="Add" value="Add Book" onclick="updateBooks()">Update Book</button>
+        </form>
+    </div>
+    <div class="container3">
+                <div class="subparent">
+                    <input type="text" oninput="Searchcategory()" list="products" placeholder="Search by category" id="searchcategory">
+                    <input type="text" oninput="Searchauthor()" placeholder="search by author" id="searchauthor">
+                    <input type="text" oninput="Searchtitle()" placeholder="search by title" id="searchtitle">
+                </div>
+            <div class="body1" id="bod">
+
+            </div>
+    </div>
+    <div class="container4">
+        <div class="caption">
+            <h2>Contact Information</h2>
+            <p>We have branches in many locations in arabic countires like Egypt , Tunisia , Algeria ,
+                Palastien but our main branch is in Egypt excatly in Cairo ,  we are trying these days
+                to extend our branches to Europe and Asia countries
+            </p>
+            <p>Our Main Branch contact information : </p>
+            <ul>
+                <li><i class="fa-solid fa-map"></i>Cairo,Eltahrir,beside El-Sadat metro station</li>
+                <li><i class="fa-solid fa-phone"></i>+46 123 456 789</li>
+                <li><i class="fa-solid fa-headphones"></i>+37 431 456 789</li>
+                <li><i class="fa-regular fa-envelope"></i>hello@sitename.com</li>
+            </ul>
+        </div>
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.7230634988741!2d31.23475117724306!3d30.046536454553813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145841e122cdd6bb%3A0x629f170304fb1441!2sCAF%20Cafe%20-%20The%20Egyptian%20Museum!5e0!3m2!1sar!2seg!4v1713556262705!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="container5">
+        <h2>
+            <img src="images/logo2.jpg" alt="logo">
+            Online Library
+        </h2>
+        <p>Copyright &copy; 2024. All rights reserved.</p>
+        <ul>
+            <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+            <li><i class="fa-brands fa-x-twitter"></i></li>
+            <li><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+            <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    
+        <button id="arrow"><i class="fa-solid fa-arrow-up"></i></button>
+
+        <script src="Javascript/new_books.js"></script>  
+        <script src="Javascript/books.js"></script>
+        <script src="Javascript/search.js"></script>
+        <script src="Javascript/main.js"></script>
+        <script src="Javascript/main2.js"></script>
+</body>

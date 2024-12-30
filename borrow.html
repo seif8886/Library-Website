@@ -1,0 +1,51 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Online Library website">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Library website</title>
+        <link rel="stylesheet" href="CSS/nav.css">
+        <link rel="stylesheet" href="CSS/borrow.css">
+        <link rel="icon" href="../Photes/logo.jpg">
+        <script src="https://kit.fontawesome.com/bd735b1809.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="CSS/footer.css">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <h2>
+                <img src="images/logo2.jpg" alt="logo">
+                Online Library
+            </h2>
+            <div class="links">
+                <ul>
+                    <li><a href="project.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li>
+                        <input type="text" id="Search" placeholder="Search here" onkeypress="Search(event)">
+                    </li>
+                    <li><a href="project.html">Log out</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container" id="add_book">
+            <div class="child">
+                <form>
+                    <label for="book_name">Name:</label>
+                    <input type="text" id="book_name" name="book_name" required class="hv"><br>
+                    <label for="author">Phone Number:</label>
+                    <input type="text" id="author" name="author" required class="hv"><br>
+                    <label for="category">Address:</label>
+                    <input type="text" id="category" name="category" required class="hv"><br>
+                    <input type="submit" class="sbm" value="Borrow">
+                </form>
+            </div>
+        </div>
+        <script src="Javascript/search.js"></script>
+    </body>
+</html>
